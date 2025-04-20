@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';  // npm install axios react-router-dom
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 export default function LoginScreen()
@@ -11,13 +11,13 @@ export default function LoginScreen()
     const handleSubmit = async(e) => {
         e.preventDefault();
         try{
-        const response = await axios.post('http://localhost:3000/' , formData);  //this Will be the URL of the API I think on riplet
+        const response = await axios.post('http://localhost:3000/login' , formData);  //this Will be the URL of the API I think on riplet
         if(response.data.success)
         {
-            alert(response.data.message);
-            localStorage.setItem('username', formData.user_name);
-            console.log('Navigating to home...');
-            navigate('/dashboard');
+            alert(response.data.message)
+            localStorage.setItem('username', formData.user_name)
+            console.log('Navigating to home...')
+            navigate('/dashboard')
     }
     else {
       alert(response.data.message);
@@ -46,6 +46,13 @@ export default function LoginScreen()
             <br/>
                     <button type='submit'>Log In</button>
             </form>
+            <br/><br/>
+            <section className='newUser'>
+                <p>
+                    Don't already have a login?  Get one by clicking the button below.
+                </p>
+                <Link className='buttonLink' to='/register'>Sign Up</Link>
+            </section>
         </>
     );
 }

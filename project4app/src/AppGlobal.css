@@ -2,10 +2,19 @@
     display: flexbox;
     align-items: center;
     text-align: center;
-    margin-top: 35%;
+    margin:auto;
 }
 
 input{
     padding:0.25rem;
     margin:0.25rem;
+}
+
+.buttonLink{
+    text-decoration: none;
+    color: black;
+    background-color: hsl(0, 0%, 93%);
+    border: solid, 1px;
+    border-radius: 0.25rem;
+    padding: 0.125rem;
 }
