@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Register()
 {
     const [formData, setFormData] = useState({user_name: '' , user_password: ''})
+   // const navigate = useNavigate();
 
     const handleSubmit = async(e) => {
         e.preventDefault();
@@ -13,7 +14,9 @@ export default function Register()
             const response = await axios.post('http://localhost:3000/register' , formData);  //this Will be the URL of the API I think on riplet
             if(response.data)
             {
-                alert(response.data.message); 
+                alert(response.data.message);
+                console.log('Navigating to login...')
+                navigate('/')
             }
         } catch (err) {
             alert('Failed to register');

@@ -16,7 +16,7 @@ export default function LoginScreen()
         {
             alert(response.data.message)
             localStorage.setItem('username', formData.user_name)
-            console.log('Navigating to home...')
+            console.log('Navigating to dashboard...')
             navigate('/dashboard')
     }
     else {
