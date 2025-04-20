@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { HashRouter, Routes, Route } from 'react-router-dom'
+
+
 import LoginScreen from './LogInScreen'
 import Register from './Register'
 
@@ -7,11 +9,15 @@ export default function App() {
   
 
   return (
-    <>
-      <LoginScreen/>
-      <br/>
-      <Register/>
-    </>
+    <HashRouter>
+      <section className='appBody'>
+        <Routes>
+          <Route path='/' element={<LoginScreen/>}/>
+          <Route path='/register' element={<Register/>}/>
+          <Route path
+        </Routes>
+      </section>
+    </HashRouter>
   )
 }
 
