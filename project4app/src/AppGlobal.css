@@ -1,0 +1,11 @@
+.appBody{
+    display: flexbox;
+    align-items: center;
+    text-align: center;
+    margin-top: 35%;
+}
+
+input{
+    padding:0.25rem;
+    margin:0.25rem;
+}

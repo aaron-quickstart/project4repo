@@ -1,4 +1,5 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
+import "./AppGlobal.css"
 
 
 import LoginScreen from './LogInScreen'
