@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 export default function LoginScreen()
 {
     const [formData, setFormData] = useState({user_name: '' , user_password: ''})
-    const nagivate = useNavigate();
+    const navigate = useNavigate();
 
     const handleSubmit = async(e) => {
         e.preventDefault();
@@ -15,9 +15,9 @@ export default function LoginScreen()
         if(response.data.success)
         {
             alert(response.data.message);
-        localStorage.setItem('username', formData.username);
-        console.log('Navigating to home...');
-        navigate('/home');
+            localStorage.setItem('username', formData.user_name);
+            console.log('Navigating to home...');
+            navigate('/dashboard');
     }
     else {
       alert(response.data.message);
