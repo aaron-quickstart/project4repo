@@ -30,7 +30,7 @@ export default function Register()
                     onChange={(e) => setFormData({... formData, user_name: e.target.value})} />
                 <input type='password' placeholder='Password' required
                     onChange={(e) => setFormData({... formData, user_password: e.target.value})} />
-                    <button type='submit'>Login</button>
+                    <button type='submit'>Register</button>
             </form>
         </>
     );

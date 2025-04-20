@@ -1,12 +1,50 @@
-# React + Vite
+# Project 4 Full Stack "Discussion Board"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Author
+## Aaron Clure
+- aaron12clure@gmail.com
 
-Currently, two official plugins are available:
+### Project 4 Name
+- S.S.D.  (Storage Systems Discussions)
+    - Hardware: Evolution and Perfomance
+        - SSD, HDD, NVMe, tape storage, rope storage (NASA), DNA storage (future tech)
+        - performance metrics (IOPS, latency, throughput)
+        - trade-offs (cost vs. durability)
+            - “HDDs are old school, but are they still relevant in 2025 with SSDs dominating? Drop your take on the best storage hardware for performance vs. budget.”
+    - Cloud Storage: Scalability vs. Privacy
+        - AWS, Google Cloud, and Azure
+        - debating scalability, accessibility, and cost-efficiency
+        - Dropbox, OneDrive, or decentralized options like IPFS
+            - “Is cloud storage worth the hype, or are you skeptical about Big Tech holding your data? Share your go-to cloud service and why it slaps (or flops).”
+    - Storage Security: Protecting Data in a Wild World
+        - encryption (AES-256, anyone?)
+        - access controls
+        - zero trust models
+        - backup strategies
+        - compliance (GDPR or HIPAA)
+            - “What’s your top tip for keeping stored data hacker-proof? Spill the tea on encryption, backups, or that one time your NAS got owned.”
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Description
+- Upon loading the website, users will be met with a login / sign up screen.
+- If the user has a profile, logging in will automatically navigate to the discussion dashboard.
+- From the dashboard users may join a topcial discussion board to read and/or create posts.
+- Commenting on posts will facilitate both Q/A and debate style interactions.
 
-## Expanding the ESLint configuration
+#### Technologies
+- HTML
+- CSS
+- JavaScript
+- React
+- Vite
+- SQL
+- Riplet
+- GitHub
+- Draw.io
+- Google Drive
+- Google Docs
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+#### Future Imporvments
+- Add Light / Dark Mode
+- Add Colorful mode to add colors to headings and text boxes
+- Create a "remember me" feature that will allow users to avoid logging in every time accessing the discussion board
+- allow a guest view that hides usernames and only shows titles.  Clicking any links will return the user to the login screen.
