@@ -1,15 +1,18 @@
 import { useState } from 'react'
 import LoginScreen from './LogInScreen'
+import Register from './Register'
 
 
-function App() {
+export default function App() {
   
 
   return (
     <>
       <LoginScreen/>
+      <br/>
+      <Register/>
     </>
   )
 }
 
-export default App
+

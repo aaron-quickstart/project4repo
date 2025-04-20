@@ -3,23 +3,28 @@ import axios from 'axios';  // npm install axios react-router-dom
 
 
 
-export default function LoginScreen()
+export default function Register()
 {
     const [formData, setFormData] = useState({user_name: '' , user_password: ''})
 
     const handleSubmit = async(e) => {
         e.preventDefault();
-        const response = await axios.post('http://localhost:3000/login' , formData);  //this Will be the URL of the API I think on riplet
-        if(response.data)
-        {
-            alert(response.data.message); 
+        try{
+            const response = await axios.post('http://localhost:3000/register' , formData);  //this Will be the URL of the API I think on riplet
+            if(response.data)
+            {
+                alert(response.data.message); 
+            }
+        } catch (err) {
+            alert('Failed to register');
         }
+
     }
 
-
+ 
     return(
         <>
-            <h2>Log in</h2>
+            <h2>Register</h2>
             <form onSubmit={handleSubmit}>
                 <input type='username' placeholder='User Name' required
                     onChange={(e) => setFormData({... formData, user_name: e.target.value})} />
