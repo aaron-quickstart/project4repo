@@ -10,9 +10,9 @@ export default function LoginScreen()
     const handleSubmit = async(e) => {
         e.preventDefault();
         const response = await axios.post('http://localhost:3000/login' , formData);  //this Will be the URL of the API I think on riplet
-        if(response)
+        if(response.data)
         {
-            console.log(response);
+            alert(response.data.message);
         }
     }
 
