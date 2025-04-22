@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import "./AppGlobal.css"
 
 
-import LoginScreen from './LogInScreen'
-import Register from './Register'
-import Dashboard from './Dashboard'
+import LoginScreen from '../LogInScreen'
+import Register from './components/Register'
+import Dashboard from '../Dashboard'
 
 
 export default function App() {
