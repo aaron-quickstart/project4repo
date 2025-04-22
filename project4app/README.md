@@ -27,7 +27,7 @@
 #### Description
 - Upon loading the website, users will be met with a login / sign up screen.
 - If the user has a profile, logging in will automatically navigate to the discussion dashboard.
-- From the dashboard users may join a topcial discussion board to read and/or create posts.
+- From the dashboard users may join a topcial discussion board, each with their own tabs to read and/or create posts.
 - Commenting on posts will facilitate both Q/A and debate style interactions.
 
 #### Technologies

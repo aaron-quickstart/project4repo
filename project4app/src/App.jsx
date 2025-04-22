@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import "./AppGlobal.css"
 
 
@@ -11,7 +11,7 @@ export default function App() {
   
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <section className='appBody'>
         <Routes>
           <Route path='/' element={<LoginScreen/>}/>
@@ -19,7 +19,7 @@ export default function App() {
           <Route path='/dashboard' element={<Dashboard/>}/>
         </Routes>
       </section>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 

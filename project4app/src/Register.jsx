@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Register()
 {
     const [formData, setFormData] = useState({user_name: '' , user_password: ''})
-   // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const handleSubmit = async(e) => {
         e.preventDefault();
@@ -15,8 +15,8 @@ export default function Register()
             if(response.data)
             {
                 alert(response.data.message);
-                console.log('Navigating to login...')
-                navigate('/')
+                console.log('Navigating to dashboard...')
+                navigate('/dashboard')
             }
         } catch (err) {
             alert('Failed to register');
