@@ -1,20 +1,271 @@
-.appBody{
-    display: flexbox;
-    align-items: center;
+/* App.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .app {
+    background: linear-gradient(180deg, #d3d3d3, #a9a9a9); /* Office drawer background */
+    min-height: 100vh;
+    padding: 10px;
+  }
+  
+  /* Home Page (Login/Sign-up) */
+  .home {
     text-align: center;
-    margin:auto;
-}
+    padding: 20px;
+  }
+  
+  .home h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .home p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .home form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .home input,
+  .home textarea,
+  .home button {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+  
+  .home button {
+    background-color: #f4e4bc; /* Manilla folder color */
+    border: none;
+    cursor: pointer;
+  }
 
-input{
-    padding:0.25rem;
-    margin:0.25rem;
-}
-
-.buttonLink{
+  .buttonLink{
+    background-color: #f4e4bc; /* Manilla folder color */
+    color:black;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    padding: 3px;
+    margin: 3px;
+  }
+  
+  /* Dashboard */
+  .dashboard {
+    padding: 20px;
+  }
+  
+  .dashboard h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .categories {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .category-tab {
+    background-color: #f4e4bc;
+    padding: 8px;
+    text-align: center;
     text-decoration: none;
     color: black;
-    background-color: hsl(0, 0%, 93%);
-    border: solid, 1px;
-    border-radius: 0.25rem;
-    padding: 0.125rem;
-}
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  
+  .dashboard section {
+    margin-bottom: 20px;
+  }
+  
+  .dashboard h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  /* Discussion Page */
+  .discussion-page {
+    padding: 20px;
+  }
+  
+  .discussion-page h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    background-color: #f4e4bc;
+    padding: 8px;
+    font-size: 0.9rem;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .tab--unselected {
+    filter: brightness(80%);
+  }
+  
+  .tab--active {
+    background-color: #fffacd;
+  }
+  
+  .display {
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .post {
+    margin-bottom: 20px;
+  }
+  
+  .post h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+  
+  .post p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .comments {
+    margin: 10px 0;
+    padding-left: 10px;
+    border-left: 2px solid #ccc;
+  }
+  
+  .comment {
+    margin-bottom: 10px;
+  }
+  
+  .comment p {
+    font-size: 0.85rem;
+  }
+  
+  .post form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .post textarea {
+    height: 60px;
+    resize: none;
+  }
+
+  .new-post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .new-post-form input,
+  .new-post-form textarea {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+  
+  .new-post-form textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  /* Tablet and Up */
+  @media (min-width: 768px) {
+    .app {
+      padding: 20px;
+    }
+  
+    .home h1,
+    .dashboard h1,
+    .discussion-page h1 {
+      font-size: 2rem;
+    }
+  
+    .categories,
+    .tabs {
+      flex-direction: row;
+      gap: 10px;
+    }
+  
+    .category-tab,
+    .tab {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  
+    .display {
+      padding: 20px;
+    }
+  
+    .post h3 {
+      font-size: 1.3rem;
+    }
+  
+    .post p,
+    .comment p {
+      font-size: 1rem;
+    }
+
+    .new-post-form input,
+
+    .new-post-form textarea {
+        font-size: 1rem;
+      }
+  }
+  
+  /* Desktop and Up */
+  @media (min-width: 1024px) {
+    .app {
+      padding: 30px;
+    }
+  
+    .home,
+    .dashboard,
+    .discussion-page {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  
+    .category-tab,
+    .tab {
+      font-size: 1.1rem;
+      clip-path: polygon(0 0, 85% 0, 100% 30%, 100% 100%, 0 100%); /* Manilla folder shape */
+    }
+  
+    .display {
+      padding: 30px;
+    }
+  }

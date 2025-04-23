@@ -1,37 +1,41 @@
+import { Link } from 'react-router-dom';
 
+function Dashboard() {
+  const categories = [
+    { name: 'Hardware: Evolution and Performance', slug: 'hardware' },
+    { name: 'Cloud Storage: Scalability vs. Privacy', slug: 'cloud-storage' },
+    { name: 'Storage Security: Protecting Data in a Wild World', slug: 'storage-security' },
+  ];
 
-
-
-
-export default function DashBoard()
-{
-
-
-
-    return (
-        <>
-        <header>
-            <h2>S.S.D.</h2>
-            <h4>Storage Systems Discussions</h4>
-        </header>
-        <nav className='folderBtns'>
-            <button className='navBtn'>Home</button>
-            <button className='navBtn'>Hardware</button>
-            <button className='navBtn'>Cloud Storage</button>
-            <button className='navBtn'>Storage Security</button>
-        </nav>
-        <section className='displayDiv'>
-        <h3>Welcome to the community!</h3>
-            <h5>Keep things civil.  More rules below</h5>
-            <ul>
-                <li>Minimize swearing</li>
-                <li>Do not start arguments.  Debating and arguing are two different concepts.</li>
-                <li>No soliciting</li>
-                <li>Hatred will not be tolerated</li>
-            </ul>
-            <p>Rule Violations will be investigated and handled case by case by a trained representative.  NOT AI.</p>
-        </section>
-        </>
-
-    )
+  return (
+    <main className="dashboard">
+      <h1>Forum Name</h1>
+      <nav className="categories">
+        {categories.map((category) => (
+          <Link
+            key={category.slug}
+            to={`/discussion/${category.slug}`}
+            className="category-tab"
+          >
+            {category.name}
+          </Link>
+        ))}
+      </nav>
+      <section>
+        <h2>Welcome Message</h2>
+        <p>Welcome to the S.S.D. Forum! Join the conversation!</p>
+      </section>
+      <section>
+        <h2>Forum Rules</h2>
+        <ul>
+          <li>Be respectful.</li>
+          <li>No spam.</li>
+          <li>No solicitation</li>
+          <li>Stay on topic</li>
+        </ul>
+      </section>
+    </main>
+  );
 }
+
+export default Dashboard;
