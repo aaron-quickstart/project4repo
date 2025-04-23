@@ -40,9 +40,10 @@ export default function Register() {
         />
         <button type="submit">Register</button>
       </form>
+      <br/>
       <p>
         Already have an account?{' '}
-        <Link to="/">Log In</Link>
+        <Link className='buttonLink' to="/">Log In</Link>
       </p>
     </main>
   );
