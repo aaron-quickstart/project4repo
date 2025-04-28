@@ -12,7 +12,7 @@ function Post({ post }) {
     const fetchComments = async () => {
       setLoadingComments(true);
       try {
-        const response = await axios.get(`http://localhost:3000/comments/${post.id}`);
+        const response = await axios.get(`https://97561a5c-78a9-4951-b578-ba513320d705-00-zmtvbpaas1i0.picard.replit.dev/comments/${post.id}`);
         setComments(response.data);
       } catch (err) {
         console.error('Failed to fetch comments:', err);
@@ -28,7 +28,7 @@ function Post({ post }) {
     e.preventDefault();
     const username = localStorage.getItem('username') || 'Anonymous';
     try {
-      const response = await axios.post('http://localhost:3000/comments', {
+      const response = await axios.post('https://97561a5c-78a9-4951-b578-ba513320d705-00-zmtvbpaas1i0.picard.replit.dev/comments', {
         post_id: post.id,
         author: username,
         content: newComment,

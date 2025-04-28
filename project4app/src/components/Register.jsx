@@ -9,7 +9,7 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/register', formData);
+      const response = await axios.post('https://97561a5c-78a9-4951-b578-ba513320d705-00-zmtvbpaas1i0.picard.replit.dev/register', formData);
       if (response.data.success) {
         alert(response.data.message);
         console.log('Navigating to dashboard...');

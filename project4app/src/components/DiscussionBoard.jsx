@@ -15,7 +15,7 @@ function DiscussionBoard({ tabs, category }) {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:3000/posts/${category}/${openDiscussion.toLowerCase()}`
+          `https://97561a5c-78a9-4951-b578-ba513320d705-00-zmtvbpaas1i0.picard.replit.dev/posts/${category}/${openDiscussion.toLowerCase()}`
         );
         setPosts(response.data);
       } catch (err) {
@@ -33,7 +33,7 @@ function DiscussionBoard({ tabs, category }) {
     e.preventDefault();
     const username = localStorage.getItem('username') || 'Anonymous';
     try {
-      const response = await axios.post('http://localhost:3000/posts', {
+      const response = await axios.post('https://97561a5c-78a9-4951-b578-ba513320d705-00-zmtvbpaas1i0.picard.replit.dev/posts', {
         category,
         tab: openDiscussion.toLowerCase(),
         author: username,
@@ -43,7 +43,7 @@ function DiscussionBoard({ tabs, category }) {
       if (response.data.success) {
         // Refetch posts after creating a new one
         const updatedPosts = await axios.get(
-          `http://localhost:3000/posts/${category}/${openDiscussion.toLowerCase()}`
+          `https://97561a5c-78a9-4951-b578-ba513320d705-00-zmtvbpaas1i0.picard.replit.dev/posts/${category}/${openDiscussion.toLowerCase()}`
         );
         setPosts(updatedPosts.data);
         setNewPost({ topic: '', content: '' });
